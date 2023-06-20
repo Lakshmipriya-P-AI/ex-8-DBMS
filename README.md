@@ -16,6 +16,7 @@ To implement CASE,CROSS,JOIN,FULL OURT JOIN in SQL.
 6. After compiling and running the program, the results will be displayed.
 ## PROGRAM:
 ### TABLE:
+```
 sql
 CREATE TABLE EMPLOYEE(
  	SNO int,
@@ -31,9 +32,9 @@ INSERT INTO EMPLOYEE VALUES (5,'Max','Zeus',4500);
 INSERT INTO EMPLOYEE VALUES (6,'Jacob','Norway',6700);
 INSERT INTO EMPLOYEE VALUES (7,'Becky','Rodgerd',10000);
 SELECT *FROM EMPLOYEE;
-
+```
 ### CASE:
-
+```
 SELECT SALARY ,
 CASE
 	WHEN SALARY <= 3000 THEN 'LOW'
@@ -41,27 +42,27 @@ CASE
     ELSE 'HIGH'
 END AS PREDICT
 FROM EMPLOYEE
-
+```
 
 ### FULL OUTER JOIN:
-
+```
 SELECT FRUITS.basket_id, BASKET.basket_id
 FROM FRUITS
 FULL OUTER JOIN BASKET ON FRUITS.basket_id=BASKET.basket_id
 ORDER BY FRUITS.basket_id;
-
+```
 ### CROSS JOIN:
-
+```
 SELECT SalesOrg.sales_org , Channel.channel
 FROM SalesOrg
 CROSS JOIN Channel;
-
+```
 ### JOIN:
-
+```
 SELECT SalesOrg.sales_id , Channel.channel_id
 FROM SalesOrg
 JOIN Channel;
-
+```
 ## OUTPUT:
 ### CASE:
 ![image](https://github.com/VaishnaviMariappan/EXP08_SQL/assets/94169913/ec6cd915-ffb8-46f1-993c-cd67af18eeb1)
